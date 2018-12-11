@@ -15,23 +15,14 @@ author.
 $(function () {
 		 $( "#scrabble_board_1" ).draggable();
 		 $( "#scrabble_board_2" ).draggable();
-		 $( "#scrabble_board_3" ).draggable();
-		 $( "#scrabble_board_4" ).draggable();
-		 $( "#scrabble_board_5" ).draggable();
-		 $( "#scrabble_board_6" ).draggable();
-		 $( "#scrabble_board_7" ).draggable();
-		 $( "#scrabble_board_8" ).draggable();
-		 $( "#scrabble_board_9" ).draggable();
-		 $( "#scrabble_board_10" ).draggable();
-		 $( "#scrabble_board_11" ).draggable();
-		 $( "#scrabble_board_12" ).draggable();
-		 $( "#droppable" ).droppable({
+		 $( "#tile_1" ).droppable({
 	drop: function( event, ui ) {
 		$( this )
 			.addClass( "ui-state-highlight" )
 			.find( "p" )
 				.html( "Dropped!" );
 	}
+
 });
 $.getJSON("pieces.json", function( data ) {
 			console.log(data);
